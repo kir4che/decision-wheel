@@ -1,0 +1,63 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap");
+
+@theme {
+  --color-pink-50: #fff9f9;
+  --color-pink-100: #ffecf0;
+  --color-pink-200: #ffd6e0;
+  --color-pink-300: #fec4d1;
+  --color-pink-400: #feb7c8;
+  --color-pink-500: #ff9db4;
+  --color-pink-600: #f77e9d;
+  --color-pink-700: #e95c85;
+  --color-pink-800: #e03d72;
+  --color-pink-900: #d61f60;
+  --color-pink-950: #831843;
+
+  --color-gray-400: #9ca3af;
+  --color-gray-900: #111827;
+
+  --color-primary: var(--color-pink-600);
+  --color-secondary: var(--color-pink-500);
+
+  --animate-bounce-short: bounce 1s ease-in-out infinite;
+}
+
+@layer base {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(247, 126, 157, 0.3) transparent;
+  }
+
+  html::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background-color: rgba(247, 126, 157, 0.3);
+    border-radius: 20px;
+  }
+
+  body {
+    font-family: "Noto Sans TC", system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+    background-color: var(--color-pink-50);
+    color: var(--color-gray-900);
+  }
+
+  a,
+  button {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  a[aria-disabled="true"] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    color: var(--color-gray-400);
+  }
+}
